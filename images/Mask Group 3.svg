@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="55" viewBox="0 0 60 55">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_21" data-name="Rectangle 21" width="60" height="55" transform="translate(959 5909)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_3" data-name="Mask Group 3" transform="translate(-959 -5909)" clip-path="url(#clip-path)">
+    <path id="instagram-svgrepo-com" d="M37.064,20.682A16.342,16.342,0,0,0,20.682,36.854V59.51A16.342,16.342,0,0,0,37.064,75.682h22.95A16.342,16.342,0,0,0,76.4,59.51V36.854A16.342,16.342,0,0,0,60.014,20.682Zm0,5h22.95A11.23,11.23,0,0,1,71.331,36.854V59.51A11.23,11.23,0,0,1,60.014,70.682H37.064A11.23,11.23,0,0,1,25.747,59.51V36.854A11.23,11.23,0,0,1,37.064,25.682ZM63.5,31.151a2.266,2.266,0,1,0,2.295,2.266A2.27,2.27,0,0,0,63.5,31.151ZM48.539,33.182a15,15,0,1,0,15.195,15A15.14,15.14,0,0,0,48.539,33.182Zm0,5a10,10,0,1,1-10.13,10A10.022,10.022,0,0,1,48.539,38.182Z" transform="translate(940.461 5888.318)" fill="#fff"/>
+  </g>
+</svg>

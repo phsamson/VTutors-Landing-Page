@@ -1,0 +1,1080 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+@import "globals.scss";
+
+body {
+     width: 100%;
+     height: 100%;
+     font-size: 1.3rem;
+     overflow-x: hidden;
+     .container {
+          nav {
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               position: fixed;
+               z-index: 1000;
+               background-color: none;
+               min-height: 75px;
+               width: 100%;
+               padding: 15px 20px;
+               transition: 500ms;
+               &.sticky {
+                    background-color: var(--secondcolor-darker);
+                    transition: 500ms;
+                    padding: 10px 15px;
+                    .nav-links {
+                         display: flex;
+                         justify-content: space-around;
+                         align-items: center;
+                         width: 300px;
+                         li {
+                              color: var(--firstcolor);
+                              font-size: 0.9rem;
+                              font-weight: 500;
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 5px;
+                              &.active::after {
+                                   content: "";
+                                   width: 100%;
+                                   height: 4px;
+                                   background-color: var(--thirdcolor);
+                                   transform: scale(1,1);
+                                   transition: transform 200ms ease-in;
+                              }
+                         }
+                         li::after {
+                              content: "";
+                              width: 100%;
+                              height: 4px;
+                              background-color: var(--thirdcolor);
+                              transform: scale(0,1);
+                              transition: transform 200ms ease-in;
+                         }
+                         li:hover::after {
+                              transform: scale(1,1);
+                         }
+               }
+               .brand-logo {
+                    img {
+                         height: 40px;
+                         width: 125px;
+                    }
+               }
+               .nav-links {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 300px;
+                    li {
+                         color: var(--firstcolor);
+                         font-size: 0.9rem;
+                         font-weight: 500;
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+                         margin-top: 5px;
+                         &.active::after {
+                              content: "";
+                              width: 100%;
+                              height: 4px;
+                              background-color: var(--thirdcolor);
+                              transform: scale(1,1);
+                              transition: transform 200ms ease-in;
+                         }
+                    }
+                    li::after {
+                         content: "";
+                         width: 100%;
+                         height: 4px;
+                         background-color: var(--thirdcolor);
+                         transform: scale(0,1);
+                         transition: transform 200ms ease-in;
+                    }
+                    li:hover::after {
+                         transform: scale(1,1);
+                    }
+               }
+               .button-container {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 250px;
+                    li {
+                         color: var(--firstcolor);
+                         font-size: 0.9rem;
+                         font-weight: 500;
+                         border: 2px solid var(--thirdcolor);
+                         border-radius: 15px;
+                         padding: 6px 25px;
+                         transition: 300ms;
+                    }
+                    li:hover {
+                         background-color: var(--thirdcolor);
+                         transition: 300ms;
+                    }
+               }
+               .burger {
+                    display: none;
+                    div {
+                         width: 25px;
+                         height: 3px;
+                         background-color: var(--firstcolor);
+                         margin: 5px;
+                         transition: all 0.3s ease;
+                    }    
+               }
+          }
+          
+     
+          main {
+               #home {
+                    position: relative;
+                    height: 100vh;
+                    background: url(../images/debby-hudson-asviIGR3CPE-unsplash.png) center no-repeat;
+                    background-size: cover;
+                    z-index: 10;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .home-container {
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+                         width: 100%;
+                         padding: 0px 200px;
+                         .text-container {
+                              font-size: 3rem;
+                              font-weight: 700;
+                              letter-spacing: 1px;
+                              color: var(--firstcolor);
+                              text-align: center;
+                              margin-top: 100px;
+                              span {
+                                   color: var(--thirdcolor);
+                              }
+                         }
+                         a {
+                              margin-top: 50px;
+                              margin-bottom: 100px;
+                              button {
+                                   color: var(--firstcolor);
+                                   border: 2px solid var(--thirdcolor);
+                                   border-radius: 15px;
+                                   padding: 8px 24px;
+                                   background: var(--thirdcolor);
+                                   font-family: poppins, sans-serif;
+                                   font-size: 0.9rem;
+                                   font-weight: 600;
+                                   cursor: pointer;
+                                   outline: none;
+                                   box-shadow: 8px 8px 10px -5px rgba(0,0,0,0.6);
+                                   transition: 300ms;
+                                   &:active {
+                                        box-shadow: inset 8px 8px 10px -5px rgba(0,0,0,0.6);
+                                   }
+                                   &:hover {
+                                        border-color: var(--thirdcolor-lighter);
+                                        background: var(--thirdcolor-lighter); 
+                                        transition: 300ms;
+                                   }
+                              }
+                         }
+                    }
+               }
+               #why-vtutors {
+                    background: var(--secondcolor);
+                    padding: 100px 0px;
+                    .why-vtutors-container {
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+                         .title-container {
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+                              align-items: center;
+                              .title-text {
+                                   font-size: 2.8rem;
+                                   letter-spacing: 0.1rem;
+                                   font-weight: 700;
+                                   text-transform: uppercase;
+                                   color: var(--firstcolor);
+                                   span {
+                                        text-transform: none;
+                                        color: var(--thirdcolor);
+                                        letter-spacing: 0.1rem;
+                                   }
+                              }
+                         }
+                         .title-container::after {
+                              content: "";
+                              width: 60%;
+                              height: 7px;
+                              background-color: var(--thirdcolor);
+                              border-radius: 5px;
+                              margin-top: 5px;
+                         }
+                         .features-boxes-container {
+                              display: flex;
+                              flex-wrap: wrap;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 60px;
+                              width: 100%;
+                              .feature-box {
+                                   display: flex;
+                                   flex-direction: column;
+                                   justify-content: space-evenly;
+                                   align-items: center;
+                                   text-align: center;
+                                   width: 280px;
+                                   height: 450px;
+                                   background-color: var(--firstcolor);
+                                   border-radius: 40px;
+                                   padding: 30px;
+                                   margin: 40px 20px;
+                                   box-shadow: 8px 8px 10px -5px rgba(0,0,0,0.6);
+                                   svg {
+                                        height: 80px;
+                                        width: 80px;
+                                        margin-top: 25px;
+                                   }
+                                   .sub-title {
+                                        font-weight: 700;
+                                        font-size: 1.3rem;
+                                        letter-spacing: 0.1rem;
+                                   }
+                                   .description {
+                                        font-weight: 300;
+                                        font-size: 0.9rem;
+                                        margin-bottom: 25px;
+                                        text-align: center;
+                                   }
+                              }
+                         }
+                    }
+               }
+               #online-tutors {
+                    background: var(--firstcolor);
+                    padding: 100px 0px;
+                    .online-tutors-container {
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+                         .title-container {
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+                              align-items: center;
+                              .title-text {
+                                   display: flex;
+                                   flex-direction: column;
+                                   justify-content: center;
+                                   align-items: center;
+                                   font-size: 2.8rem;
+                                   letter-spacing: 0.1rem;
+                                   font-weight: 700;
+                                   text-transform: uppercase;
+                              }
+                              .title-text::after {
+                                   content: "";
+                                   width: 70%;
+                                   height: 7px;
+                                   background-color: var(--thirdcolor);
+                                   border-radius: 5px;
+                                   margin-top: 5px;
+                              }
+                              .title-description {
+                                   width: 60%;
+                                   text-align: center;
+                                   margin-top: 30px;
+                                   font-size: 1.2rem;
+                                   font-weight: 400;
+                              }
+                         }
+                         .online-tutors-content {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              width: 100%;
+                              margin-top: 75px;
+                              .left-side {
+                                   img {
+                                        height: 435px;
+                                        width: 615px;
+                                   }
+                              }
+                              .right-side {
+                                   display: flex;
+                                   flex-direction: column;
+                                   justify-content: space-around;
+                                   margin: 0px 100px;
+                                   height: 375px;
+                                   .subtitle {
+                                        font-size: 1.5rem;
+                                        font-weight: 700;
+                                        text-align: center;
+                                   }
+                                   .sub-description {
+                                        font-size: 1.1rem;
+                                        font-weight: 400;
+                                        width: 300px;
+                                        text-align: center;
+                                   }
+                                   .subject-list {
+                                        li {
+                                             display: flex;
+                                             align-items: center;
+                                             font-size: 1rem;
+                                             svg {
+                                                  height: 15px;
+                                                  width: 15px;
+                                                  margin-left: 15px;
+                                             }
+                                        }
+                                   }
+                                   .find-tutor {
+                                        color: var(--firstcolor);
+                                        border: 2px solid var(--thirdcolor);
+                                        border-radius: 15px;
+                                        padding: 10px 24px;
+                                        background: var(--thirdcolor);
+                                        font-family: poppins, sans-serif;
+                                        font-size: 1rem;
+                                        font-weight: 600;
+                                        cursor: pointer;
+                                        outline: none;
+                                        box-shadow: 8px 8px 10px -5px rgba(0,0,0,0.6);
+                                        transition: 300ms;
+                                        &:hover {
+                                             border-color: var(--thirdcolor-lighter);
+                                             background: var(--thirdcolor-lighter); 
+                                             transition: 300ms;
+                                        }
+                                        &:active {
+                                             box-shadow: inset 8px 8px 10px -5px rgba(0,0,0,0.6);
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+               #contact {
+                    .email-block-container {
+                         position: relative;
+                         height: 200px;
+                         background-color: var(--secondcolor);
+                         z-index: 50;
+                         .foreground {
+                              position: absolute;
+                              z-index: 60;
+                              height: 100%;
+                              width: 100%;
+                              background-color: var(--thirdcolor);
+                              clip-path: polygon(50% 100%, 0 0, 100% 0);
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              .block-text-title {
+                                   position: absolute;
+                                   z-index: 70;
+                                   text-align: center;
+                                   font-size: 2rem;
+                                   font-weight: 800;
+                                   span {
+                                        font-size: 1.3rem;
+                                        font-weight: 500;
+                                   }
+                              }
+                         }
+                    }
+                    .contact-container {
+                         background: url(/images/marten-bjork-6dW3xyQvcYE-unsplash.png) center no-repeat;
+                         background-size: cover;
+                         padding: 100px 0px 200px 0px;
+                         .title-container {
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+                              align-items: center;
+                              .title-text {
+                                   display: flex;
+                                   flex-direction: column;
+                                   justify-content: center;
+                                   align-items: center;
+                                   font-size: 2.8rem;
+                                   letter-spacing: 0.1rem;
+                                   font-weight: 700;
+                                   text-transform: uppercase;
+                              }
+                              .title-text::after {
+                                   content: "";
+                                   width: 70%;
+                                   height: 7px;
+                                   background-color: var(--thirdcolor);
+                                   border-radius: 5px;
+                                   margin-top: 5px;
+                              }
+                         }
+                         .form-container {
+                              margin-top: 75px;
+                              display: flex;
+                              justify-content: flex-start;
+                              align-items: center;
+                              #form-box {
+                                   display: inline-flex;
+                                   flex-direction: column;
+                                   align-items: center;
+                                   padding: 60px 30px;
+                                   width: 500px;
+                                   background-color: var(--secondcolor-lighter);
+                                   margin-left: 10%;
+                                   border-radius: 7px;
+                                   .form-title {
+                                        font-size: 1.8rem;
+                                        text-align: center;
+                                        font-weight: 600;
+                                        color: var(--firstcolor);
+                                   }
+                                   .input-container {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: flex-start;
+                                        width: 90%;
+                                        margin-top: 25px;
+                                        label {
+                                             font: inherit;
+                                             font-size: 1.1rem;
+                                             font-weight: 400;
+                                             color: var(--firstcolor);
+                                        }
+                                        input, textarea {
+                                             margin: 0px 15px 15px 0px;
+                                             font-family: poppins, sans-serif;
+                                             padding: 7px 10px 7px 10px;
+                                             font-size: 0.8rem;
+                                             font-weight: 300;
+                                             background-color: var(--secondcolor);
+                                             border-style: none;
+                                             color: var(--firstcolor);
+                                             width: 100%;
+                                             border-radius: 7px;
+                                             resize: none;
+                                             &:focus {
+                                                  outline: none;
+                                                  box-shadow: inset 5px 5px 10px -1px rgba(0,0,0,0.3);
+                                             }
+                                             &::placeholder {
+                                                  color: var(--secondcolor-lighter);
+                                             }
+                                        }
+                                   }
+                                   .submit-button-container {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        min-width: 200px;
+                                        min-height: 30px;
+                                        #submit-button {
+                                             padding: 7px 35px;
+                                             margin-top: 30px;
+                                             border: var(--thirdcolor) 2px solid;
+                                             border-radius: 15px;
+                                             background-color: var(--thirdcolor);
+                                             cursor: pointer;
+                                             font-family: poppins, sans-serif;
+                                             font-weight: 600;
+                                             color: var(--firstcolor);
+                                             outline: none;
+                                             transition: 300ms;
+                                             box-shadow: 8px 8px 10px -5px rgba(0,0,0,0.6);
+                                             &:hover {
+                                                  background-color: var(--thirdcolor-lighter);
+                                                  border-color: var(--thirdcolor-lighter);
+                                                  transition: 300ms;
+                                             }
+                                             &:active {
+                                                  box-shadow: inset 8px 8px 10px -5px rgba(0,0,0,0.6);
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+          #footer {
+               height: 400px;
+               background-color: var(--secondcolor);
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               .footer-container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 500px;
+                    a {
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                         .arrow-up-container {
+                              position: absolute;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              height: 50px;
+                              width: 50px;
+                              margin-top: -50px;
+                              background-color: var(--thirdcolor);
+                              cursor: pointer;
+                              box-shadow: 5px 8px 8px rgba(0,0,0,0.4);
+                              svg {
+                                   height: 30px;
+                                   width: 30px;
+                              }
+                         }
+                    }
+                    .social-media-container {
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: space-around;
+                         align-items: center;
+                         height: 350px;
+                         width: 600px;
+                         padding: 20px 0px;
+                         .social-description {
+                              font-size: 1.8rem;
+                              font-weight: 400;
+                              color: var(--firstcolor);
+                         }
+                         .social-media-boxes-container {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              width: 350px;
+                              a {
+                                   margin: 0px 15px;
+                                   .social-media-box {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        background-color: var(--secondcolor-lighter);
+                                        padding: 15px;
+                                        box-shadow: 5px 8px 8px rgba(0,0,0,0.4);
+                                        svg {
+                                             fill: var(--firstcolor);
+                                             height: 30px;
+                                             width: 30px;
+                                        }
+                                        &#facebook-icon:hover {
+                                             background-color: #3b5998;
+                                        }
+                                        &#twitter-icon:hover {
+                                             background-color: #00acee;
+                                        }
+                                        &#instagram-icon:hover {
+                                             background-image: linear-gradient(to bottom right, #8a3ab9, #bc2a8d, #fccc63, #fbad50);
+                                        }
+                                        &#youtube-icon:hover {
+                                             background-color: #FF0000;
+                                        }
+                                   }
+                              }
+                         }
+                         .copyright-container {
+                              .copyright-text {
+                                   font-weight: 100;
+                                   font-size: 0.9rem;
+                                   color: var(--firstcolor);
+                                   span {
+                                        color: var(--thirdcolor);
+                                   }
+                              }
+                         } 
+                    }
+               }
+          }
+     }
+}
+
+/*MEDIA QUERIES FOR RESPONSIVENESS*/
+@media screen and (max-width:1024px) {
+     body {
+          .container {
+               main {
+                    #home {
+                         .home-container {
+                              padding: 0px 100px;
+                         }
+                    }
+                    #online-tutors {
+                         .online-tutors-container {
+                              .online-tutors-content {
+                                   .left-side {
+                                        img {
+                                             height: 385px;
+                                             width: 565px;
+                                        }
+                                   }
+                                   .right-side {
+                                        margin: 0px 50px;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@media screen and (max-width:900px) {
+     body {
+          .container {
+               main {
+                    #online-tutors {
+                         .online-tutors-container {
+                              .online-tutors-content {
+                                   display: flex;
+                                   flex-direction: column;
+                                   justify-content: center;
+                                   align-items: center;
+                                   flex-wrap: nowrap;
+                                   .right-side {
+                                        margin: 20px 40px 0px 40px;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@media screen and (max-width:768px){
+     body {
+          .container {
+               nav {
+                    &.sticky {
+
+                    }
+                    .nav-links {
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+                         background-color: var(--secondcolor-darker);
+                         position: fixed;
+                         right: 0px;
+                         height: 100vh;
+                         top: 0vh;
+                         width: 250px;
+                         padding: 75px 0px;
+                         opacity: 0.98;
+                         transform: translateX(100%);
+                         transition: transform 0.5s ease-in;
+                         li {
+                              font-size: 1.5rem;
+                              margin: 25px;
+                              opacity: 0;
+                         }
+                         &.nav-active {
+                              transform: translateX(0%);
+                         }
+                    }
+                    .burger {
+                         position: relative;
+                         display: block;
+                         cursor: pointer;
+                         z-index: 2000;
+                         &.toggle .line1 {
+                              transform: rotate(-45deg) translate(-5px, 6px);
+                         }
+                              
+                         &.toggle .line2 {
+                              opacity: 0;
+                         }
+                              
+                         &.toggle .line3 {
+                              transform: rotate(45deg) translate(-5px, -6px);
+                         }
+                    }
+               }
+               main {
+                    #home {
+                         .home-container {
+                              padding: 0px 50px;
+                              .text-container {
+                                   font-size: 2.5rem;
+                              }
+                         }
+                    }
+                    #why-vtutors {
+                         .why-vtutors-container {
+                              .title-container {
+                                   .title-text {
+                                        font-size: 2.5rem;
+                                   }
+                              }
+                              .features-boxes-container {
+                                   .feature-box {
+                                        width: 250px;
+                                        height: 400px;
+                                        padding: 20px;
+                                   }
+                              }
+                         }
+                    }
+                    #online-tutors {
+                         .online-tutors-container {
+                              .title-container {
+                                   .title-text {
+                                        font-size: 2.5rem;
+                                   }
+                                   .title-description {
+                                        font-size: 1.1rem;
+                                   }
+                              }
+                              .online-tutors-content {
+                                   display: flex;
+                                   flex-direction: column;
+                                   justify-content: center;
+                                   align-items: center;
+                                   flex-wrap: nowrap;
+                                   .left-side {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        img {
+                                        height: 400px;
+                                        width: 580px;
+                                        }
+                                   }
+                                   .right-side {
+                                        margin: 20px 40px 0px 40px;
+                                   }
+                              }
+                         }
+                    }
+                    #contact {
+                         .contact-container {
+                              .title-container {
+                                   .title-text {
+                                        font-size: 2.5rem;
+                                   }
+                              }
+                              .form-container {
+                                   justify-content: center;
+                                   #form-box {
+                                        margin-left: 0%;
+                                        padding: 50px 20px;
+                                        .input-container {
+                                             input, textarea {
+                                                  margin: 0px 0px 15px;
+                                                  padding: 7px 10px 7px 10px;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+               #footer {
+                    .footer-container {
+                         .social-media-container {
+                              .social-description {
+                                   font-size: 1.6rem;
+                              }
+                              .social-media-boxes-container {
+                                   a {
+                                        .social-media-box {
+                                             padding: 12px;
+                                             svg {
+                                                  height: 26px;
+                                                  width: 26px;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@media screen and (max-width:600px) {
+     body {
+          .container {
+               main {
+                    #home {
+                         .home-container {
+                              padding: 0px 40px;
+                              .text-container {
+                                   font-size: 2rem;
+                              }
+                              a {
+                                   margin-bottom: 65px;
+                              }
+                         }
+                    }
+                    #why-vtutors {
+                         .why-vtutors-container {
+                              .title-container {
+                                   .title-text {
+                                        font-size: 2rem;
+                                   }
+                              }
+                              .features-boxes-container {
+                                   margin-top: 40px;
+                                   .feature-box {
+                                        width: 225px;
+                                        height: 375px;
+                                        margin: 30px 15px;
+                                        svg {
+                                             height: 60px;
+                                             width: 60px;
+                                        }
+                                        .sub-title {
+                                             font-size: 1.1rem;
+                                        }
+                                        .description {
+                                             font-size: 0.8rem;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    #online-tutors {
+                         .online-tutors-container {
+                              .title-container {
+                                   .title-text {
+                                        font-size: 2rem;
+                                   }
+                                   .title-description {
+                                        font-size: 1rem;
+                                        width: 70%;
+                                   }
+                              }
+                              .online-tutors-content {
+                                   .left-side {
+                                        width: 100%;
+                                        img {
+                                             height: 300px;
+                                             width: 460px;
+                                        }
+                                   }
+                                   .right-side {
+                                        align-items: center;
+                                        width: 350px;
+                                        .sub-description {
+                                             font-size: 1rem;
+                                        }
+                                        .subject-list {
+                                             margin-left: -120px;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    #contact {
+                         .email-block-container {
+                              .foreground {
+                                   .block-text-title {
+                                        font-size: 1.7rem;
+                                        span {
+                                             font-size: 1.1rem;
+                                        }
+                                   }
+                              }
+                         }
+                         .contact-container {
+                              .title-container {
+                                   .title-text {
+                                        font-size: 2rem;
+                                   }
+                              }
+                              .form-container {
+                                   #form-box {
+                                        padding: 40px 15px;
+                                        height: 600px;
+                                        width: 400px;
+                                        .form-title {
+                                             font-size: 1.5rem;
+                                        }
+                                        .input-container {
+                                             width: 85%;
+                                             label {
+                                                  font-size: 1rem;
+                                             }
+                                             textarea {
+                                                  height: 200px;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+               #footer {
+                    .footer-container {
+                         a {
+                              .arrow-up-container {
+                                   height: 45px;
+                                   width: 45px;
+                                   svg {
+                                        height: 25px;
+                                        width: 25px;
+                                   }
+                              }
+                         }
+                         .social-media-container {
+                              .social-description {
+                                   font-size: 1.5rem;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@media screen and (max-width:480px) {
+     body {
+          .container {
+               main {
+                    #home {
+                         .home-container {
+                              padding: 0px 20px;
+                              .text-container {
+                                   font-size: 1.8rem;
+                              }
+                         }
+                    }
+                    #why-vtutors {
+                         .why-vtutors-container {
+                              .title-container {
+                                   .title-text {
+                                        font-size: 1.8rem;
+                                   }
+                                   &::after {
+                                        height: 5px;
+                                   }
+                              }
+                              .features-boxes-container {
+                                   .feature-box {
+                                        width: 225px;
+                                        height: 375px;
+                                        margin: 25px 10px;
+                                   }
+                              }
+                         }
+                    }
+                    #online-tutors {
+                         .online-tutors-container {
+                              .title-container {
+                                   .title-text {
+                                        font-size: 1.8rem;
+                                        &::after {
+                                             height: 5px;
+                                        }
+                                   }
+                                   .title-description {
+                                        font-size: 0.95rem;
+                                   }
+                              }
+                              .online-tutors-content {
+                                   .left-side {
+                                        width: 100%;
+                                        img {
+                                             height: 250px;
+                                             width: 410px;
+                                        }
+                                   }
+                                   .right-side {
+                                        .subtitle {
+                                             font-size: 1.4rem;
+                                        }
+                                        .sub-description {
+                                             font-size: 0.95rem;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    #contact {
+                         .email-block-container {
+                              height: 175px;
+                              .foreground {
+                                   .block-text-title {
+                                        font-size: 1.45rem;
+                                        span {
+                                             font-size: 1rem;
+                                        }
+                                   }
+                              }
+                         }
+                         .contact-container {
+                              .title-container {
+                                   .title-text {
+                                        font-size: 1.8rem;
+                                   }
+                              }
+                         }
+                    }
+               }
+               #footer {
+                    .footer-container {
+                         .social-media-container {
+                              .social-description {
+                                   font-size: 1.3rem;
+                              }
+                              .copyright-container {
+                                   .copyright-text {
+                                        font-size: 0.8rem;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@media screen and (max-width:480px) {
+     body {
+          .container {
+               nav {
+                    min-height: 85px;
+                    .button-container {
+                         display: none;
+                    }
+               }
+          }
+     }
+}
+/*END OF MEDIA QUERIES FOR RESPONSIVENESS*/
+
+/*NAV LINKS ANIMATION*/
+@keyframes navLinkFade {
+     from {
+         opacity: 0;
+         transform: translateX(50px);
+     }
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }

@@ -61,6 +61,69 @@ body .container nav.sticky {
   padding: 10px 15px;
 }
 
+body .container nav.sticky .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+}
+
+body .container nav.sticky .nav-links li {
+  color: var(--firstcolor);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+}
+
+body .container nav.sticky .nav-links li.active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--thirdcolor);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: -webkit-transform 200ms ease-in;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+}
+
+body .container nav.sticky .nav-links li::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--thirdcolor);
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: -webkit-transform 200ms ease-in;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+}
+
+body .container nav.sticky .nav-links li:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
 body .container nav .brand-logo img {
   height: 40px;
   width: 125px;
@@ -171,7 +234,7 @@ body .container nav .burger div {
   transition: all 0.3s ease;
 }
 
-body .container main #home {
+body main #home {
   position: relative;
   height: 100vh;
   background: url(../images/debby-hudson-asviIGR3CPE-unsplash.png) center no-repeat;
@@ -188,7 +251,7 @@ body .container main #home {
           align-items: center;
 }
 
-body .container main #home .home-container {
+body main #home .home-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,7 +269,7 @@ body .container main #home .home-container {
   padding: 0px 200px;
 }
 
-body .container main #home .home-container .text-container {
+body main #home .home-container .text-container {
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -215,16 +278,16 @@ body .container main #home .home-container .text-container {
   margin-top: 100px;
 }
 
-body .container main #home .home-container .text-container span {
+body main #home .home-container .text-container span {
   color: var(--thirdcolor);
 }
 
-body .container main #home .home-container a {
+body main #home .home-container a {
   margin-top: 50px;
   margin-bottom: 100px;
 }
 
-body .container main #home .home-container a button {
+body main #home .home-container a button {
   color: var(--firstcolor);
   border: 2px solid var(--thirdcolor);
   border-radius: 15px;
@@ -241,24 +304,24 @@ body .container main #home .home-container a button {
   transition: 300ms;
 }
 
-body .container main #home .home-container a button:active {
+body main #home .home-container a button:active {
   -webkit-box-shadow: inset 8px 8px 10px -5px rgba(0, 0, 0, 0.6);
           box-shadow: inset 8px 8px 10px -5px rgba(0, 0, 0, 0.6);
 }
 
-body .container main #home .home-container a button:hover {
+body main #home .home-container a button:hover {
   border-color: var(--thirdcolor-lighter);
   background: var(--thirdcolor-lighter);
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-body .container main #why-vtutors {
+body main #why-vtutors {
   background: var(--secondcolor);
   padding: 100px 0px;
 }
 
-body .container main #why-vtutors .why-vtutors-container {
+body main #why-vtutors .why-vtutors-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,7 +337,7 @@ body .container main #why-vtutors .why-vtutors-container {
           align-items: center;
 }
 
-body .container main #why-vtutors .why-vtutors-container .title-container {
+body main #why-vtutors .why-vtutors-container .title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,7 +353,7 @@ body .container main #why-vtutors .why-vtutors-container .title-container {
           align-items: center;
 }
 
-body .container main #why-vtutors .why-vtutors-container .title-container .title-text {
+body main #why-vtutors .why-vtutors-container .title-container .title-text {
   font-size: 2.8rem;
   letter-spacing: 0.1rem;
   font-weight: 700;
@@ -298,13 +361,13 @@ body .container main #why-vtutors .why-vtutors-container .title-container .title
   color: var(--firstcolor);
 }
 
-body .container main #why-vtutors .why-vtutors-container .title-container .title-text span {
+body main #why-vtutors .why-vtutors-container .title-container .title-text span {
   text-transform: none;
   color: var(--thirdcolor);
   letter-spacing: 0.1rem;
 }
 
-body .container main #why-vtutors .why-vtutors-container .title-container::after {
+body main #why-vtutors .why-vtutors-container .title-container::after {
   content: "";
   width: 60%;
   height: 7px;
@@ -313,7 +376,7 @@ body .container main #why-vtutors .why-vtutors-container .title-container::after
   margin-top: 5px;
 }
 
-body .container main #why-vtutors .why-vtutors-container .features-boxes-container {
+body main #why-vtutors .why-vtutors-container .features-boxes-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,7 +392,7 @@ body .container main #why-vtutors .why-vtutors-container .features-boxes-contain
   width: 100%;
 }
 
-body .container main #why-vtutors .why-vtutors-container .features-boxes-container .feature-box {
+body main #why-vtutors .why-vtutors-container .features-boxes-container .feature-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,31 +417,31 @@ body .container main #why-vtutors .why-vtutors-container .features-boxes-contain
           box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.6);
 }
 
-body .container main #why-vtutors .why-vtutors-container .features-boxes-container .feature-box svg {
+body main #why-vtutors .why-vtutors-container .features-boxes-container .feature-box svg {
   height: 80px;
   width: 80px;
   margin-top: 25px;
 }
 
-body .container main #why-vtutors .why-vtutors-container .features-boxes-container .feature-box .sub-title {
+body main #why-vtutors .why-vtutors-container .features-boxes-container .feature-box .sub-title {
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 0.1rem;
 }
 
-body .container main #why-vtutors .why-vtutors-container .features-boxes-container .feature-box .description {
+body main #why-vtutors .why-vtutors-container .features-boxes-container .feature-box .description {
   font-weight: 300;
   font-size: 0.9rem;
   margin-bottom: 25px;
   text-align: center;
 }
 
-body .container main #online-tutors {
+body main #online-tutors {
   background: var(--firstcolor);
   padding: 100px 0px;
 }
 
-body .container main #online-tutors .online-tutors-container {
+body main #online-tutors .online-tutors-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,7 +457,7 @@ body .container main #online-tutors .online-tutors-container {
           align-items: center;
 }
 
-body .container main #online-tutors .online-tutors-container .title-container {
+body main #online-tutors .online-tutors-container .title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,7 +473,7 @@ body .container main #online-tutors .online-tutors-container .title-container {
           align-items: center;
 }
 
-body .container main #online-tutors .online-tutors-container .title-container .title-text {
+body main #online-tutors .online-tutors-container .title-container .title-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,7 +493,7 @@ body .container main #online-tutors .online-tutors-container .title-container .t
   text-transform: uppercase;
 }
 
-body .container main #online-tutors .online-tutors-container .title-container .title-text::after {
+body main #online-tutors .online-tutors-container .title-container .title-text::after {
   content: "";
   width: 70%;
   height: 7px;
@@ -439,7 +502,7 @@ body .container main #online-tutors .online-tutors-container .title-container .t
   margin-top: 5px;
 }
 
-body .container main #online-tutors .online-tutors-container .title-container .title-description {
+body main #online-tutors .online-tutors-container .title-container .title-description {
   width: 60%;
   text-align: center;
   margin-top: 30px;
@@ -447,7 +510,7 @@ body .container main #online-tutors .online-tutors-container .title-container .t
   font-weight: 400;
 }
 
-body .container main #online-tutors .online-tutors-container .online-tutors-content {
+body main #online-tutors .online-tutors-container .online-tutors-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -461,12 +524,12 @@ body .container main #online-tutors .online-tutors-container .online-tutors-cont
   margin-top: 75px;
 }
 
-body .container main #online-tutors .online-tutors-container .online-tutors-content .left-side img {
+body main #online-tutors .online-tutors-container .online-tutors-content .left-side img {
   height: 435px;
   width: 615px;
 }
 
-body .container main #online-tutors .online-tutors-container .online-tutors-content .right-side {
+body main #online-tutors .online-tutors-container .online-tutors-content .right-side {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,20 +543,20 @@ body .container main #online-tutors .online-tutors-container .online-tutors-cont
   height: 375px;
 }
 
-body .container main #online-tutors .online-tutors-container .online-tutors-content .right-side .subtitle {
+body main #online-tutors .online-tutors-container .online-tutors-content .right-side .subtitle {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
 }
 
-body .container main #online-tutors .online-tutors-container .online-tutors-content .right-side .sub-description {
+body main #online-tutors .online-tutors-container .online-tutors-content .right-side .sub-description {
   font-size: 1.1rem;
   font-weight: 400;
   width: 300px;
   text-align: center;
 }
 
-body .container main #online-tutors .online-tutors-container .online-tutors-content .right-side .subject-list li {
+body main #online-tutors .online-tutors-container .online-tutors-content .right-side .subject-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -503,13 +566,13 @@ body .container main #online-tutors .online-tutors-container .online-tutors-cont
   font-size: 1rem;
 }
 
-body .container main #online-tutors .online-tutors-container .online-tutors-content .right-side .subject-list li svg {
+body main #online-tutors .online-tutors-container .online-tutors-content .right-side .subject-list li svg {
   height: 15px;
   width: 15px;
   margin-left: 15px;
 }
 
-body .container main #online-tutors .online-tutors-container .online-tutors-content .right-side .find-tutor {
+body main #online-tutors .online-tutors-container .online-tutors-content .right-side .find-tutor {
   color: var(--firstcolor);
   border: 2px solid var(--thirdcolor);
   border-radius: 15px;
@@ -526,26 +589,26 @@ body .container main #online-tutors .online-tutors-container .online-tutors-cont
   transition: 300ms;
 }
 
-body .container main #online-tutors .online-tutors-container .online-tutors-content .right-side .find-tutor:hover {
+body main #online-tutors .online-tutors-container .online-tutors-content .right-side .find-tutor:hover {
   border-color: var(--thirdcolor-lighter);
   background: var(--thirdcolor-lighter);
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-body .container main #online-tutors .online-tutors-container .online-tutors-content .right-side .find-tutor:active {
+body main #online-tutors .online-tutors-container .online-tutors-content .right-side .find-tutor:active {
   -webkit-box-shadow: inset 8px 8px 10px -5px rgba(0, 0, 0, 0.6);
           box-shadow: inset 8px 8px 10px -5px rgba(0, 0, 0, 0.6);
 }
 
-body .container main #contact .email-block-container {
+body main #contact .email-block-container {
   position: relative;
   height: 200px;
   background-color: var(--secondcolor);
   z-index: 50;
 }
 
-body .container main #contact .email-block-container .foreground {
+body main #contact .email-block-container .foreground {
   position: absolute;
   z-index: 60;
   height: 100%;
@@ -564,7 +627,7 @@ body .container main #contact .email-block-container .foreground {
           align-items: center;
 }
 
-body .container main #contact .email-block-container .foreground .block-text-title {
+body main #contact .email-block-container .foreground .block-text-title {
   position: absolute;
   z-index: 70;
   text-align: center;
@@ -572,18 +635,18 @@ body .container main #contact .email-block-container .foreground .block-text-tit
   font-weight: 800;
 }
 
-body .container main #contact .email-block-container .foreground .block-text-title span {
+body main #contact .email-block-container .foreground .block-text-title span {
   font-size: 1.3rem;
   font-weight: 500;
 }
 
-body .container main #contact .contact-container {
-  background: url(/images/marten-bjork-6dW3xyQvcYE-unsplash.png) center no-repeat;
+body main #contact .contact-container {
+  background: url(../images/marten-bjork-6dW3xyQvcYE-unsplash.png) center no-repeat;
   background-size: cover;
   padding: 100px 0px 200px 0px;
 }
 
-body .container main #contact .contact-container .title-container {
+body main #contact .contact-container .title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -599,7 +662,7 @@ body .container main #contact .contact-container .title-container {
           align-items: center;
 }
 
-body .container main #contact .contact-container .title-container .title-text {
+body main #contact .contact-container .title-container .title-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,7 +682,7 @@ body .container main #contact .contact-container .title-container .title-text {
   text-transform: uppercase;
 }
 
-body .container main #contact .contact-container .title-container .title-text::after {
+body main #contact .contact-container .title-container .title-text::after {
   content: "";
   width: 70%;
   height: 7px;
@@ -628,7 +691,7 @@ body .container main #contact .contact-container .title-container .title-text::a
   margin-top: 5px;
 }
 
-body .container main #contact .contact-container .form-container {
+body main #contact .contact-container .form-container {
   margin-top: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -641,7 +704,7 @@ body .container main #contact .contact-container .form-container {
           align-items: center;
 }
 
-body .container main #contact .contact-container .form-container #form-box {
+body main #contact .contact-container .form-container #form-box {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -659,14 +722,14 @@ body .container main #contact .contact-container .form-container #form-box {
   border-radius: 7px;
 }
 
-body .container main #contact .contact-container .form-container #form-box .form-title {
+body main #contact .contact-container .form-container #form-box .form-title {
   font-size: 1.8rem;
   text-align: center;
   font-weight: 600;
   color: var(--firstcolor);
 }
 
-body .container main #contact .contact-container .form-container #form-box .input-container {
+body main #contact .contact-container .form-container #form-box .input-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,14 +747,14 @@ body .container main #contact .contact-container .form-container #form-box .inpu
   margin-top: 25px;
 }
 
-body .container main #contact .contact-container .form-container #form-box .input-container label {
+body main #contact .contact-container .form-container #form-box .input-container label {
   font: inherit;
   font-size: 1.1rem;
   font-weight: 400;
   color: var(--firstcolor);
 }
 
-body .container main #contact .contact-container .form-container #form-box .input-container input, body .container main #contact .contact-container .form-container #form-box .input-container textarea {
+body main #contact .contact-container .form-container #form-box .input-container input, body main #contact .contact-container .form-container #form-box .input-container textarea {
   margin: 0px 15px 15px 0px;
   font-family: poppins, sans-serif;
   padding: 7px 10px 7px 10px;
@@ -705,29 +768,29 @@ body .container main #contact .contact-container .form-container #form-box .inpu
   resize: none;
 }
 
-body .container main #contact .contact-container .form-container #form-box .input-container input:focus, body .container main #contact .contact-container .form-container #form-box .input-container textarea:focus {
+body main #contact .contact-container .form-container #form-box .input-container input:focus, body main #contact .contact-container .form-container #form-box .input-container textarea:focus {
   outline: none;
   -webkit-box-shadow: inset 5px 5px 10px -1px rgba(0, 0, 0, 0.3);
           box-shadow: inset 5px 5px 10px -1px rgba(0, 0, 0, 0.3);
 }
 
-body .container main #contact .contact-container .form-container #form-box .input-container input::-webkit-input-placeholder, body .container main #contact .contact-container .form-container #form-box .input-container textarea::-webkit-input-placeholder {
+body main #contact .contact-container .form-container #form-box .input-container input::-webkit-input-placeholder, body main #contact .contact-container .form-container #form-box .input-container textarea::-webkit-input-placeholder {
   color: var(--secondcolor-lighter);
 }
 
-body .container main #contact .contact-container .form-container #form-box .input-container input:-ms-input-placeholder, body .container main #contact .contact-container .form-container #form-box .input-container textarea:-ms-input-placeholder {
+body main #contact .contact-container .form-container #form-box .input-container input:-ms-input-placeholder, body main #contact .contact-container .form-container #form-box .input-container textarea:-ms-input-placeholder {
   color: var(--secondcolor-lighter);
 }
 
-body .container main #contact .contact-container .form-container #form-box .input-container input::-ms-input-placeholder, body .container main #contact .contact-container .form-container #form-box .input-container textarea::-ms-input-placeholder {
+body main #contact .contact-container .form-container #form-box .input-container input::-ms-input-placeholder, body main #contact .contact-container .form-container #form-box .input-container textarea::-ms-input-placeholder {
   color: var(--secondcolor-lighter);
 }
 
-body .container main #contact .contact-container .form-container #form-box .input-container input::placeholder, body .container main #contact .contact-container .form-container #form-box .input-container textarea::placeholder {
+body main #contact .contact-container .form-container #form-box .input-container input::placeholder, body main #contact .contact-container .form-container #form-box .input-container textarea::placeholder {
   color: var(--secondcolor-lighter);
 }
 
-body .container main #contact .contact-container .form-container #form-box .submit-button-container {
+body main #contact .contact-container .form-container #form-box .submit-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -741,7 +804,7 @@ body .container main #contact .contact-container .form-container #form-box .subm
   min-height: 30px;
 }
 
-body .container main #contact .contact-container .form-container #form-box .submit-button-container #submit-button {
+body main #contact .contact-container .form-container #form-box .submit-button-container #submit-button {
   padding: 7px 35px;
   margin-top: 30px;
   border: var(--thirdcolor) 2px solid;
@@ -758,19 +821,19 @@ body .container main #contact .contact-container .form-container #form-box .subm
           box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.6);
 }
 
-body .container main #contact .contact-container .form-container #form-box .submit-button-container #submit-button:hover {
+body main #contact .contact-container .form-container #form-box .submit-button-container #submit-button:hover {
   background-color: var(--thirdcolor-lighter);
   border-color: var(--thirdcolor-lighter);
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-body .container main #contact .contact-container .form-container #form-box .submit-button-container #submit-button:active {
+body main #contact .contact-container .form-container #form-box .submit-button-container #submit-button:active {
   -webkit-box-shadow: inset 8px 8px 10px -5px rgba(0, 0, 0, 0.6);
           box-shadow: inset 8px 8px 10px -5px rgba(0, 0, 0, 0.6);
 }
 
-body .container #footer {
+body #footer {
   height: 400px;
   background-color: var(--secondcolor);
   display: -webkit-box;
@@ -784,7 +847,7 @@ body .container #footer {
           align-items: center;
 }
 
-body .container #footer .footer-container {
+body #footer .footer-container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -803,7 +866,7 @@ body .container #footer .footer-container {
   width: 500px;
 }
 
-body .container #footer .footer-container a {
+body #footer .footer-container a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -815,7 +878,7 @@ body .container #footer .footer-container a {
           align-items: center;
 }
 
-body .container #footer .footer-container a .arrow-up-container {
+body #footer .footer-container a .arrow-up-container {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -835,12 +898,12 @@ body .container #footer .footer-container a .arrow-up-container {
           box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.4);
 }
 
-body .container #footer .footer-container a .arrow-up-container svg {
+body #footer .footer-container a .arrow-up-container svg {
   height: 30px;
   width: 30px;
 }
 
-body .container #footer .footer-container .social-media-container {
+body #footer .footer-container .social-media-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -858,13 +921,13 @@ body .container #footer .footer-container .social-media-container {
   padding: 20px 0px;
 }
 
-body .container #footer .footer-container .social-media-container .social-description {
+body #footer .footer-container .social-media-container .social-description {
   font-size: 1.8rem;
   font-weight: 400;
   color: var(--firstcolor);
 }
 
-body .container #footer .footer-container .social-media-container .social-media-boxes-container {
+body #footer .footer-container .social-media-container .social-media-boxes-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -877,11 +940,11 @@ body .container #footer .footer-container .social-media-container .social-media-
   width: 350px;
 }
 
-body .container #footer .footer-container .social-media-container .social-media-boxes-container a {
+body #footer .footer-container .social-media-container .social-media-boxes-container a {
   margin: 0px 15px;
 }
 
-body .container #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box {
+body #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,36 +960,36 @@ body .container #footer .footer-container .social-media-container .social-media-
           box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.4);
 }
 
-body .container #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box svg {
+body #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box svg {
   fill: var(--firstcolor);
   height: 30px;
   width: 30px;
 }
 
-body .container #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box#facebook-icon:hover {
+body #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box#facebook-icon:hover {
   background-color: #3b5998;
 }
 
-body .container #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box#twitter-icon:hover {
+body #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box#twitter-icon:hover {
   background-color: #00acee;
 }
 
-body .container #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box#instagram-icon:hover {
+body #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box#instagram-icon:hover {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#8a3ab9), color-stop(#bc2a8d), color-stop(#fccc63), to(#fbad50));
   background-image: linear-gradient(to bottom right, #8a3ab9, #bc2a8d, #fccc63, #fbad50);
 }
 
-body .container #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box#youtube-icon:hover {
+body #footer .footer-container .social-media-container .social-media-boxes-container a .social-media-box#youtube-icon:hover {
   background-color: #FF0000;
 }
 
-body .container #footer .footer-container .social-media-container .copyright-container .copyright-text {
+body #footer .footer-container .social-media-container .copyright-container .copyright-text {
   font-weight: 100;
   font-size: 0.9rem;
   color: var(--firstcolor);
 }
 
-body .container #footer .footer-container .social-media-container .copyright-container .copyright-text span {
+body #footer .footer-container .social-media-container .copyright-container .copyright-text span {
   color: var(--thirdcolor);
 }
 

@@ -56,6 +56,7 @@ body {
                          li:hover::after {
                               transform: scale(1,1);
                          }
+                    }
                }
                .brand-logo {
                     img {
@@ -128,7 +129,7 @@ body {
                     }    
                }
           }
-          
+     }     
      
           main {
                #home {
@@ -396,7 +397,7 @@ body {
                          }
                     }
                     .contact-container {
-                         background: url(/images/marten-bjork-6dW3xyQvcYE-unsplash.png) center no-repeat;
+                         background: url(../images/marten-bjork-6dW3xyQvcYE-unsplash.png) center no-repeat;
                          background-size: cover;
                          padding: 100px 0px 200px 0px;
                          .title-container {
@@ -607,7 +608,7 @@ body {
                }
           }
      }
-}
+
 
 /*MEDIA QUERIES FOR RESPONSIVENESS*/
 @media screen and (max-width:1024px) {
@@ -666,9 +667,6 @@ body {
      body {
           .container {
                nav {
-                    &.sticky {
-
-                    }
                     .nav-links {
                          display: flex;
                          flex-direction: column;
@@ -1077,4 +1075,4 @@ body {
          opacity: 1;
          transform: translateX(0);
      }
- }
+}
